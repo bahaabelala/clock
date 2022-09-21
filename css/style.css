@@ -1,0 +1,157 @@
+/* --------- GENERAL ----------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+}
+
+body {
+    font-family: 'Bonheur Royale', cursive;
+    font-size: 14pt;
+    min-height: 100vh;
+
+    /* Flex Box */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* --------- ELEMENTS ----------- */
+
+.clock {
+    width: 500px;
+    height: 500px;
+    background-color: rgb(245, 240, 240);
+    border: 15px solid rgb(65, 62, 62);
+    border-radius: 50%;
+    box-shadow: 0 0 150px 0px rgb(50, 50, 50, 0.5) inset;
+    position: relative;
+}
+
+.clock__title {
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 65%;
+    transform: translateX(-50%);
+    font-size: 2.5rem;
+    color: #555;
+}
+
+.clock__member {
+    position: absolute;
+}
+
+.clock__hour {
+    height: 35%;
+    width: 2%;
+    clip-path: polygon(40% 0, 60% 0, 100% 100%, 0% 100%);
+    background-color: black;
+    top: 16%;
+    left: 49%;
+    border-radius: 0 0 5px 5px;
+    transform-origin: 50% 97.1428571%;
+}
+
+.clock__minute {
+    height: 42%;
+    width: 1.2%;
+    clip-path: polygon(30% 0, 70% 0, 100% 100%, 0% 100%);
+    background-color: rgb(65, 64, 64);
+    top: 8.6%;
+    left: 49.4%;
+    border-radius: 0 0 3px 3px;
+    transform-origin: 50% 98.5714286%;
+}
+
+.clock__second {
+    height: 48%;
+    width: 0.4%;
+    background-color: red;
+    top: 6.2%;
+    left: 49.8%;
+    transform-origin: 50% 91.25%;
+}
+
+.clock__letter {
+    width: 0.4%;
+    height: 4%;
+    position: absolute;
+    top: 0;
+    left: 49.7%;
+    background-color: rgb(65, 62, 62);
+    border-radius: 0 0 1px 1px;
+    transform-origin: 1px 1250%;
+}
+
+.clock__letter:nth-of-type(3n + 1) {
+    width: 0.8%;
+    height: 6%;
+    left: 49.6%;
+    border-radius: 0 0 2px 2px;
+    transform-origin: 2px 833.333333%;
+}
+
+.clock__letter--1 {
+    transform: rotate(30deg);
+}
+.clock__letter--2 {
+    transform: rotate(60deg);
+}
+.clock__letter--3 {
+    transform: rotate(90deg);
+}
+.clock__letter--4 {
+    transform: rotate(120deg);
+}
+.clock__letter--5 {
+    transform: rotate(150deg);
+}
+.clock__letter--6 {
+    transform: rotate(180deg);
+}
+.clock__letter--7 {
+    transform: rotate(210deg);
+}
+.clock__letter--8 {
+    transform: rotate(240deg);
+}
+.clock__letter--9 {
+    transform: rotate(270deg);
+}
+.clock__letter--10 {
+    transform: rotate(300deg);
+}
+.clock__letter--11 {
+    transform: rotate(330deg);
+}
+
+@media (max-width: 1000px) and (min-height: 2000px) {
+    .clock {
+        transform: scale(1.3);
+    }
+}
+
+@media (max-width: 500px) {
+    .clock {
+        width: 300px;
+        height: 300px;
+    }
+
+    .clock__title {
+        font-size: 1.8rem;
+    }
+
+    .clock__letter--6 {
+        transform: rotate(180.5deg);
+    }
+
+    .clock__letter--7 {
+        transform: rotate(210.5deg);
+    }
+
+    .clock__letter--9 {
+        transform: rotate(270.5deg);
+    }
+}
